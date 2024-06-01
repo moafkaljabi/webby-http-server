@@ -11,7 +11,7 @@ class HttpResponse{
     std::map<std::string, std::string> headers;
     std::string body;
     public:
-    std::string frameHttpResponse(std::string statuscode, std::string statusmsg, std::map<std::string, std::string> headers, std::string body);
+    std::string frameHttpResponse(std::string statuscode, std::string statusmsg, std::map<std::string, std::string> headers, std::string body,std::string mimetype);
         
     
 

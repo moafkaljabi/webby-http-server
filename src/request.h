@@ -13,6 +13,7 @@ public:
       void parseRequest(const std::string& rawRequest);
       
       std::string readHtmlFile(const std::string &path);
+      std::string getMimeType(const std::string &path);
 };
 
 

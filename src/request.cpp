@@ -66,3 +66,15 @@ std::string HttpRequest::readHtmlFile(const std::string &path){
 
     return "";
 }
+std::string HttpRequest::getMimeType(const std::string &path){
+    std::map<std::string, std::string> mimeTypes = {
+        {"html","text/html"},
+        {"css","text/css"},
+        {"js","text/javascript"},
+        {"jpg","image/jpeg"},
+        {"png","image/png"}
+    };
+    std::string fileExtension = path.substr(path.find_last_of(".") + 1);
+    // std::cout<<fileExtension<<std::endl;
+    return mimeTypes[fileExtension];
+}

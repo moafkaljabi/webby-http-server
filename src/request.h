@@ -5,7 +5,9 @@
 #include<fstream>
 #include<sstream>
 #include<iostream>
+
 class HttpRequest{
+
 public:
       std::string method;
       std:: string path;

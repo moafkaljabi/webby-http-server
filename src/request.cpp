@@ -1,12 +1,7 @@
 #include"request.h"
 
 void HttpRequest::parseRequest(const std::string& rawRequest){
-    //Todo 
-    //raw request se Get method se path nikalkr map me daalna hai.
-    //uss path me rakhi file se html read krna hai.(hope i will make a new method for this.)
-    //ab html file se content read krne ke baad string stream me store krna hai.
-    //aur sara content ko http response ke format me frame krke browser ko bhejna hai.
-    //HAHAHAHA HAHAHAHAHAH
+
     int currindex=0;
     while(currindex < rawRequest.length()){
         if(rawRequest[currindex] == ' '){
@@ -28,23 +23,11 @@ void HttpRequest::parseRequest(const std::string& rawRequest){
     }
    
     headers["path"] = path;
-    
-
-
-    //mujhe ab method mil gya hai and path mil gya hai ab mai path me se file ka name nikaalunga aur 
-    //html file ko open karke uska content read karunga.
-    //iske liye mai ek methon banaunga readhtmlFile().
-
-    
-
- 
 
 
 }
 std::string HttpRequest::readHtmlFile(const std::string &path){
-    //TODO
-    //ab html file me se content read krna hai.
-    //iske liye hume fstream use krna padega.
+
     std::string filename = path.substr(1,path.length());
    
     std::ifstream file("../"+filename); //ifstream used for reading file if exists.
